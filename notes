@@ -1,7 +1,1 @@
-steps:
-step1: script install jenkins
-step2: install docker
 
-commandes:
-sudo sytemctl status jenkins
-sudo apt intall docker.io -y
