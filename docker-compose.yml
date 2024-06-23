@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  game-2048:
+    image: mokrane921/game-2048:latest
+    deploy:
+      replicas: 3  # Nombre de réplicas souhaité
+    ports:
+      - target: 3000  # Port à l'intérieur du conteneur
+        published: 3000  # Port exposé par le service
+        protocol: tcp
+        mode: ingress
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    external: true
